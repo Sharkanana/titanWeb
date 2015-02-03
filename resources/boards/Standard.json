@@ -1,0 +1,28 @@
+{
+  "spaces": [
+    {
+      "x": 4,
+      "y": 0,
+      "type": "jungle",
+      "orientation": "top"
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "type": "brush",
+      "orientation": "top"
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "type": "swamp",
+      "orientation": "top"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "type": "marsh",
+      "orientation": "top"
+    }
+  ]
+}
