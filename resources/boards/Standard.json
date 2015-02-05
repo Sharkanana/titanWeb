@@ -1,5 +1,6 @@
 {
   "spaces": [
+    //top row
     {
       "x": 4,
       "y": 0,
@@ -23,6 +24,573 @@
       "y": 0,
       "type": "marsh",
       "orientation": "top"
+    },
+    //2nd row
+    {
+      "x": 3,
+      "y": 1,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "type": "marsh",
+      "orientation": "bot"
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "type": "desert",
+      "orientation": "bot"
+    },
+    //3rd row
+    {
+      "x": 3,
+      "y": 2,
+      "type": "brush",
+      "orientation": "top"
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "type": "hills",
+      "orientation": "top"
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "type": "tower",
+      "orientation": "top"
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "type": "jungle",
+      "orientation": "top"
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "type": "plains",
+      "orientation": "top"
+    },
+    //4th row
+    {
+      "x": 2,
+      "y": 3,
+      "type": "desert",
+      "orientation": "bot"
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "type": "jungle",
+      "orientation": "bot"
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "type": "marsh",
+      "orientation": "bot"
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "type": "woods",
+      "orientation": "bot"
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    //5th row
+    {
+      "x": 2,
+      "y": 4,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "type": "plains",
+      "orientation": "top"
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "type": "woods",
+      "orientation": "top"
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "type": "swamp",
+      "orientation": "top"
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "type": "brush",
+      "orientation": "top"
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    //6th row
+    {
+      "x": 1,
+      "y": 5,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "type": "tower",
+      "orientation": "bot"
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "type": "desert",
+      "orientation": "bot"
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "type": "hills",
+      "orientation": "bot"
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "type": "tower",
+      "orientation": "bot"
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "type": "jungle",
+      "orientation": "bot"
+    },
+    //7th row
+    {
+      "x": 1,
+      "y": 6,
+      "type": "plains",
+      "orientation": "top"
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "type": "brush",
+      "orientation": "top"
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "type": "mountains",
+      "orientation": "top"
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "type": "plains",
+      "orientation": "top"
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "type": "brush",
+      "orientation": "top"
+    },
+    //8th row
+    {
+      "x": 0,
+      "y": 7,
+      "type": "swamp",
+      "orientation": "bot"
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "type": "woods",
+      "orientation": "bot"
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "type": "hills",
+      "orientation": "bot"
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "type": "tundra",
+      "orientation": "bot"
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "type": "tundra",
+      "orientation": "bot"
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "type": "desert",
+      "orientation": "bot"
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "type": "jungle",
+      "orientation": "bot"
+    },
+    {
+      "x": 14,
+      "y": 7,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    //9th row
+    {
+      "x": 0,
+      "y": 8,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "type": "jungle",
+      "orientation": "top"
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "type": "swamp",
+      "orientation": "top"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "type": "mountains",
+      "orientation": "top"
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "type": "mountains",
+      "orientation": "top"
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "type": "woods",
+      "orientation": "top"
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "type": "hills",
+      "orientation": "top"
+    },
+    {
+      "x": 14,
+      "y": 8,
+      "type": "swamp",
+      "orientation": "top"
+    },
+    //10th row
+    {
+      "x": 1,
+      "y": 9,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "type": "marsh",
+      "orientation": "bot"
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "type": "tundra",
+      "orientation": "bot"
+    },
+    {
+      "x": 9
+      "y": 9,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    {
+      "x": 13,
+      "y": 9,
+      "type": "marsh",
+      "orientation": "bot"
+    },
+    //11th row
+    {
+      "x": 1,
+      "y": 10,
+      "type": "jungle",
+      "orientation": "top"
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "type": "tower",
+      "orientation": "top"
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "type": "woods",
+      "orientation": "top"
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "type": "swamp",
+      "orientation": "top"
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "type": "tower",
+      "orientation": "top"
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "type": "brush",
+      "orientation": "top"
+    },
+    //12th row
+    {
+      "x": 2,
+      "y": 11,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "type": "desert",
+      "orientation": "bot"
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "type": "hills",
+      "orientation": "bot"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "type": "marsh",
+      "orientation": "bot"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    //13th row
+    {
+      "x": 2,
+      "y": 12,
+      "type": "brush",
+      "orientation": "top"
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "type": "hills",
+      "orientation": "top"
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "type": "plains",
+      "orientation": "top"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "type": "brush",
+      "orientation": "top"
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "type": "jungle",
+      "orientation": "top"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "type": "desert",
+      "orientation": "top"
+    },
+    //14th row
+    {
+      "x": 3,
+      "y": 13,
+      "type": "marsh",
+      "orientation": "bot"
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "type": "jungle",
+      "orientation": "bot"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "type": "tower",
+      "orientation": "bot"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "type": "woods",
+      "orientation": "bot"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    //15th row
+    {
+      "x": 3,
+      "y": 14,
+      "type": "desert",
+      "orientation": "top"
+    },
+    {
+      "x": 5,
+      "y": 14,
+      "type": "brush",
+      "orientation": "top"
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "type": "plains",
+      "orientation": "top"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "type": "marsh",
+      "orientation": "top"
+    },
+    //16th row
+    {
+      "x": 4,
+      "y": 15,
+      "type": "plains",
+      "orientation": "bot"
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "type": "swamp",
+      "orientation": "bot"
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "type": "brush",
+      "orientation": "bot"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "type": "jungle",
+      "orientation": "bot"
     }
   ]
 }
