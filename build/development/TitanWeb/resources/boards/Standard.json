@@ -514,204 +514,263 @@
       "xPos": 1,
       "yPos": 10,
       "terrain": "jungle",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "three"
     },
     {
       "xPos": 3,
       "yPos": 10,
       "terrain": "tower",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "one",
+      "left": "one",
+      "right": "one"
     },
     {
       "xPos": 5,
       "yPos": 10,
       "terrain": "woods",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "three",
+      "right": "circle"
     },
     {
       "xPos": 7,
       "yPos": 10,
       "terrain": "marsh",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "circle",
+      "right": "three"
     },
     {
       "xPos": 9,
       "yPos": 10,
       "terrain": "swamp",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "circle",
+      "up": "three"
     },
     {
       "xPos": 11,
       "yPos": 10,
       "terrain": "tower",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "one",
+      "left": "one",
+      "right": "one"
     },
     {
       "xPos": 13,
       "yPos": 10,
       "terrain": "brush",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "three"
     },
     //12th row
     {
       "xPos": 2,
       "yPos": 11,
       "terrain": "plains",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "three",
+      "right": "circle"
     },
     {
       "xPos": 4,
       "yPos": 11,
       "terrain": "brush",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "circle",
+      "down": "three"
     },
     {
       "xPos": 6,
       "yPos": 11,
       "terrain": "desert",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "circle",
+      "right": "three"
     },
     {
       "xPos": 8,
       "yPos": 11,
       "terrain": "hills",
-      "orientation": "bot"
+      "orientation": "bot",
+      "down": "three",
+      "right": "circle"
     },
     {
       "xPos": 10,
       "yPos": 11,
       "terrain": "marsh",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "three",
+      "right": "circle"
     },
     {
       "xPos": 12,
       "yPos": 11,
       "terrain": "plains",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "circle",
+      "down": "three"
     },
     //13th row
     {
       "xPos": 2,
       "yPos": 12,
       "terrain": "brush",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "three"
     },
     {
       "xPos": 4,
       "yPos": 12,
       "terrain": "hills",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "square",
+      "right": "three"
     },
     {
       "xPos": 6,
       "yPos": 12,
       "terrain": "plains",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "three",
+      "right": "circle"
     },
     {
       "xPos": 8,
       "yPos": 12,
       "terrain": "brush",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "circle",
+      "right": "three"
     },
     {
       "xPos": 10,
       "yPos": 12,
       "terrain": "jungle",
-      "orientation": "top"
+      "orientation": "top",
+      "right": "square",
+      "up": "three"
     },
     {
       "xPos": 12,
       "yPos": 12,
       "terrain": "desert",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "three"
     },
     //14th row
     {
       "xPos": 3,
       "yPos": 13,
       "terrain": "marsh",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "three",
+      "right": "circle"
     },
     {
       "xPos": 5,
       "yPos": 13,
       "terrain": "jungle",
-      "orientation": "bot"
+      "orientation": "bot",
+      "right": "three",
+      "down": "square"
     },
     {
       "xPos": 7,
       "yPos": 13,
       "terrain": "tower",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "one",
+      "right": "one",
+      "down": "one"
     },
     {
       "xPos": 9,
       "yPos": 13,
       "terrain": "woods",
-      "orientation": "bot"
+      "orientation": "bot",
+      "right": "three",
+      "down": "square"
     },
     {
       "xPos": 11,
       "yPos": 13,
       "terrain": "brush",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "circle",
+      "down": "three"
     },
     //15th row
     {
       "xPos": 3,
       "yPos": 14,
       "terrain": "desert",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "three"
     },
     {
       "xPos": 5,
       "yPos": 14,
       "terrain": "brush",
-      "orientation": "top"
+      "orientation": "top",
+      "up": "circle",
+      "left": "three"
     },
     {
       "xPos": 7,
       "yPos": 14,
       "terrain": "marsh",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "three",
+      "up": "circle"
     },
     {
       "xPos": 9,
       "yPos": 14,
       "terrain": "plains",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "three",
+      "up": "circle"
     },
     {
       "xPos": 11,
       "yPos": 14,
       "terrain": "marsh",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "three"
     },
     //16th row
     {
       "xPos": 4,
       "yPos": 15,
       "terrain": "plains",
-      "orientation": "top"
+      "orientation": "top",
+      "left": "three"
     },
     {
       "xPos": 6,
       "yPos": 15,
       "terrain": "swamp",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "three"
     },
     {
       "xPos": 8,
       "yPos": 15,
       "terrain": "brush",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "three"
     },
     {
       "xPos": 10,
       "yPos": 15,
       "terrain": "jungle",
-      "orientation": "bot"
+      "orientation": "bot",
+      "left": "three"
     }
   ]
 }
