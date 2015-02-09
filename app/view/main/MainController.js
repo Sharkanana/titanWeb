@@ -26,28 +26,14 @@ Ext.define('TitanWeb.view.main.MainController', {
         var me = this,
             gameBoard = me.lookupReference('gameBoard'),
             surface = gameBoard.getSurface(),
-            radius = 25,
-            scale = 55,
-            padding = 30;
+            scale = gameBoard.getHeight() / 12;
 
         Ext.each(board.spaces, function(space) {
-            var newSpace = surface.add(Ext.create('TitanWeb.view.Space', Ext.apply(space, {
-                r: radius,
-                myScale: scale,
-                myPadding: padding
+            surface.add(Ext.create('TitanWeb.view.Space', Ext.apply(space, {
+                myScale: scale
             })));
         });
 
         gameBoard.renderFrame();
-    },
-
-    drawPiece: function(surface, x, y) {
-        surface.add({
-            type: 'circle',
-            fill: '#ccc',
-            radius: 50,
-            x: x,
-            y: y
-        });
     }
 });

@@ -748,7 +748,7 @@
       "xPos": 4,
       "yPos": 15,
       "terrain": "plains",
-      "orientation": "top",
+      "orientation": "bot",
       "left": "three"
     },
     {

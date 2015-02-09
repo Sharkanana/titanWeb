@@ -3,7 +3,7 @@
  * A space on the main movement game board
  */
 Ext.define('TitanWeb.view.Space', {
-    extend: 'Ext.draw.sprite.Circle',
+    extend: 'Ext.draw.sprite.Path',
     alias: 'sprite.space',
     type: 'space',
 
@@ -25,17 +25,51 @@ Ext.define('TitanWeb.view.Space', {
     /**
      * marks the direction the vertical exit will be oriented
      */
-    orientation: 'up',
+    orientation: 'top',
 
     constructor: function(config) {
-        var me = this;
+        var me = this,
+            scale = config.myScale,
+            x = config.xPos * scale + scale,
+            isBot = config.orientation === 'bot',
+            startingY = (isBot ? scale/2 : 0) + 20,
+            y = startingY + ((isBot ? (config.yPos-1) : config.yPos) * scale * .7),
+            bs = function(xAdjust, yAdjust) {
+                x += xAdjust;
+                y += yAdjust;
+                config.path += 'L' + x + ' ' + y + ' ';
+            };
 
-        config.x = config.xPos * config.myScale + config.myPadding;
-        config.y = config.yPos * config.myScale + config.myPadding;
+        if(isBot) {
+            config.path = 'M'+x+' '+y+' ';
+            bs(scale/2, 0);
+            bs(scale/2, scale/2);
+            bs(-scale/4, scale/4);
+            bs(-scale, 0);
+            bs(-scale/4, -scale/4);
+            bs(scale/2, -scale/2);
+        }
+        else {
+            x = x-scale/4;
+            config.path = 'M'+x+' '+y+' ';
+            bs(scale, 0);
+            bs(scale/4, scale/4);
+            bs(-scale/2, scale/2);
+            bs(-scale/2, 0);
+            bs(-scale/2, -scale/2);
+            bs(scale/4, -scale/4);
+        }
+
+
         config.fillStyle = TitanWeb.view.Space.TERRAIN_COLOR_MAP[config.terrain];
         config.strokeStyle = 'black';
+        config.lineWidth = 2;
 
         me.callParent(arguments);
+    },
+
+    buildSegment: function() {
+
     },
 
     statics: {
