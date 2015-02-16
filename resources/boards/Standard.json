@@ -83,14 +83,14 @@
       "terrain": "hills",
       "orientation": "top",
       "left": "three",
-      "top": "square"
+      "up": "square"
     },
     {
       "xPos": 7,
       "yPos": 2,
       "terrain": "tower",
       "orientation": "top",
-      "top": "one",
+      "up": "one",
       "left": "one",
       "right": "one"
     },
@@ -99,7 +99,7 @@
       "yPos": 2,
       "terrain": "jungle",
       "orientation": "top",
-      "top": "square",
+      "up": "square",
       "left": "three"
     },
     {
@@ -303,7 +303,7 @@
       "terrain": "marsh",
       "orientation": "top",
       "left": "circle",
-      "top": "three"
+      "up": "three"
     },
     {
       "xPos": 11,
