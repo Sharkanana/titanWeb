@@ -146,6 +146,17 @@ Ext.define('TitanWeb.view.Space', {
                     strokeStyle: 'black',
                     zIndex: 1
                 };
+            case 'square':
+                return {
+                    type: 'rect',
+                    x: x - 5,
+                    y: y - 5,
+                    width: 10,
+                    height: 10,
+                    fillStyle: 'white',
+                    strokeStyle: 'black',
+                    zIndex: 1
+                };
         }
     },
 
