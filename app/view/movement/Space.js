@@ -104,36 +104,51 @@ Ext.define('TitanWeb.view.Space', {
 
         if(me.left) {
             if(isTop) {
-                arrows.push(me.buildIndicator(me.left, me.initX - scale/2 - me.xTrans/4, me.initY + me.yTrans * .75));
+                arrows.push(me.buildIndicator(me.left, me.initX - scale/2 - me.xTrans/4, me.initY + me.yTrans * .75, 'left'));
             }
             else {
-                arrows.push(me.buildIndicator(me.left, me.initX - scale/4 - me.xTrans/4, me.initY + me.yTrans/4));
+                arrows.push(me.buildIndicator(me.left, me.initX - scale/4 - me.xTrans/4, me.initY + me.yTrans/4, 'left'));
             }
         }
 
         if(me.right) {
             if(isTop) {
-                arrows.push(me.buildIndicator(me.right, me.initX + scale/2 - me.xTrans/4, me.initY + me.yTrans * 1.25));
+                arrows.push(me.buildIndicator(me.right, me.initX + scale/2 - me.xTrans/4, me.initY + me.yTrans * 1.25, 'right'));
             }
             else {
-                arrows.push(me.buildIndicator(me.right, me.initX + scale/4 + me.xTrans * .75, me.initY + me.yTrans * .75));
+                arrows.push(me.buildIndicator(me.right, me.initX + scale/4 + me.xTrans * .75, me.initY + me.yTrans * .75, 'right'));
             }
         }
 
         if(me.up) {
-            arrows.push(me.buildIndicator(me.up, me.initX + me.xTrans/2, me.initY));
+            arrows.push(me.buildIndicator(me.up, me.initX + me.xTrans/2, me.initY, 'up'));
         }
 
         if(me.down) {
-            arrows.push(me.buildIndicator(me.down, me.initX - me.xTrans/2, me.initY + me.yTrans * 1.5));
+            arrows.push(me.buildIndicator(me.down, me.initX - me.xTrans/2, me.initY + me.yTrans * 1.5, 'down'));
         }
 
         return arrows;
     },
 
-    buildIndicator: function(type, x, y) {
+    buildIndicator: function(type, x, y, placement) {
         var me = this,
+            rotation = 0,
             isTop = me.orientation === 'top';
+
+        switch (placement) {
+            case 'left':
+                rotation = isTop ? 150 : 210;
+                break;
+            case 'right':
+                rotation = isTop ? 30 : -30;
+                break;
+            case 'up':
+                rotation = 270;
+                break;
+            case 'down':
+                rotation = 90;
+        }
 
         switch(type) {
             case 'circle':
@@ -157,6 +172,63 @@ Ext.define('TitanWeb.view.Space', {
                     strokeStyle: 'black',
                     zIndex: 1
                 };
+            case 'one':
+
+                return {
+                    type: 'path',
+                    path: 'M'+x+','+y+
+                          ' L'+(x+12)+','+(y+6)+
+                          ' L'+(x)+','+(y+12)+
+                          ' L'+(x)+','+(y),
+                    translationX: -5,
+                    translationY: -5,
+                    rotationRads: me.degToRad(rotation),
+                    fillStyle: 'white',
+                    strokeStyle: 'black',
+                    zIndex: 1
+                };
+            case 'three':
+
+                var path = '',
+                    pathBuilder = function(newX, newY) {
+                        path += 'M'+newX+','+newY+
+                        ' L'+(newX+10)+','+(newY+5)+
+                        ' L'+(newX)+','+(newY+10)+
+                        ' L'+(newX)+','+(newY);
+                    };
+
+                pathBuilder(x, y);
+                pathBuilder(x, y+10);
+                pathBuilder(x, y+20);
+
+                var tX = 0,
+                    tY = 0;
+
+                if(placement === 'left' && !isTop)
+                    tX = -20;
+                if(placement ==='right') {
+                    tX = isTop ? 5 : -10;
+                    tY = -30;
+                }
+                if(placement === 'up') {
+                    tX = -20;
+                    tY = -20;
+                }
+                if(placement === 'down') {
+                    tX = 10;
+                    tY = -10;
+                }
+
+                return {
+                    type: 'path',
+                    path: path,
+                    translationX: tX,
+                    translationY: tY,
+                    rotationRads: me.degToRad(rotation),
+                    fillStyle: 'white',
+                    strokeStyle: 'black',
+                    zIndex: 1
+                }
         }
     },
 
