@@ -58,6 +58,8 @@ Ext.define('TitanWeb.view.Space', {
 
         me.initX = x;
         me.initY = y;
+        me.xTrans = xTrans;
+        me.yTrans = yTrans;
 
         config.path = 'M'+x+' '+y+' ';
 
@@ -94,7 +96,7 @@ Ext.define('TitanWeb.view.Space', {
     /**
      * Build the sprites for the directional arrows
      */
-    buildArrows: function() {
+    buildIndicators: function() {
         var me = this,
             arrows = [],
             scale = me.myScale,
@@ -102,57 +104,49 @@ Ext.define('TitanWeb.view.Space', {
 
         if(me.left) {
             if(isTop) {
-                arrows.push(me.buildArrow(me.initX - scale * .1,me.initY + scale * .5, me.left, true, true));
+                arrows.push(me.buildIndicator(me.left, me.initX - scale/2 - me.xTrans/4, me.initY + me.yTrans * .75));
             }
             else {
-                arrows.push(me.buildArrow(me.initX - scale / 3,me.initY + scale * 1/4, me.left, true, false));
+                arrows.push(me.buildIndicator(me.left, me.initX - scale/4 - me.xTrans/4, me.initY + me.yTrans/4));
             }
         }
 
         if(me.right) {
             if(isTop) {
-                arrows.push(me.buildArrow(me.initX + scale * 1.1, me.initY + scale *.5, me.right, false, true));
+                arrows.push(me.buildIndicator(me.right, me.initX + scale/2 - me.xTrans/4, me.initY + me.yTrans * 1.25));
             }
             else {
-                arrows.push(me.buildArrow(me.initX + scale *.9, me.initY + scale *.25, me.right, false, false));
+                arrows.push(me.buildIndicator(me.right, me.initX + scale/4 + me.xTrans * .75, me.initY + me.yTrans * .75));
             }
         }
 
         if(me.up) {
-            arrows.push(me.buildArrow(me.initX + scale *.4, me.initY - scale *.1, me.up, null, true));
+            arrows.push(me.buildIndicator(me.up, me.initX + me.xTrans/2, me.initY));
         }
 
         if(me.down) {
-            arrows.push(me.buildArrow(me.initX + scale *.4, me.initY + scale *.8, me.down, null, false));
+            arrows.push(me.buildIndicator(me.down, me.initX - me.xTrans/2, me.initY + me.yTrans * 1.5));
         }
 
         return arrows;
     },
 
-    buildArrow: function(x, y, type, isLeft, isTop) {
-        //var me = this,
-        //    scale = me.myScale;
-        //
-        //switch(type) {
-        //    case 'one':
-        //        return {
-        //            type: 'path'
-        //
-        //        };
-        //    case 'three':
-        //        break;
-        //    case 'circle':
-        //        return {
-        //            type: 'circle',
-        //            r: scale / 6,
-        //            x: x,
-        //            y: y,
-        //            fillStyle: 'black',
-        //            zIndex: 1
-        //        };
-        //    case 'square':
-        //        break;
-        //}
+    buildIndicator: function(type, x, y) {
+        var me = this,
+            isTop = me.orientation === 'top';
+
+        switch(type) {
+            case 'circle':
+                return {
+                    type: 'circle',
+                    r: 5,
+                    x: x,
+                    y: y,
+                    fillStyle: 'white',
+                    strokeStyle: 'black',
+                    zIndex: 1
+                };
+        }
     },
 
     statics: {
@@ -165,7 +159,7 @@ Ext.define('TitanWeb.view.Space', {
             tundra: 'lightblue',
             mountains: 'red',
             desert: 'orange',
-            tower: 'white',
+            tower: 'gray',
             swamp: 'blue',
             woods: 'lightgreen'
         }

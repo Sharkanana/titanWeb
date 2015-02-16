@@ -34,7 +34,7 @@ Ext.define('TitanWeb.view.main.MainController', {
             }));
 
             surface.add(newSpace);
-            surface.add(newSpace.buildArrows());
+            surface.add(newSpace.buildIndicators());
         });
 
         gameBoard.renderFrame();
