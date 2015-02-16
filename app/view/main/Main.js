@@ -27,11 +27,12 @@ Ext.define('TitanWeb.view.main.Main', {
                 title: '{name}'
             },
             region: 'west',
-            width: 250,
+            width: 100,
             split: true,
             layout: 'vbox',
             defaults: {
-                xtype: 'button'
+                xtype: 'button',
+                margin: 10
             },
             items: [
                 {
@@ -43,7 +44,15 @@ Ext.define('TitanWeb.view.main.Main', {
         {
             region: 'center',
             reference: 'gameBoard',
-            xtype: 'draw'
+            xtype: 'draw',
+            sprites: [
+                {
+                    type: 'rect',
+                    fillStyle: '#3C3C3C',
+                    width: '10000',
+                    height: '10000'
+                }
+            ]
         }
     ]
 });
