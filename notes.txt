@@ -1,0 +1,17 @@
+
+
+circle
+
+square
+
+left down arrow
+
+left up arrow
+
+up arrow
+
+down arrow
+
+right down arrow
+
+right up arrow

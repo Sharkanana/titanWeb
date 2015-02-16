@@ -8,14 +8,14 @@ Ext.define('TitanWeb.view.Space', {
     type: 'space',
 
     /**
-     * scale for space spacing
+     * x position in the grid
      */
-    myScale: null,
+    xPos: null,
 
     /**
-     * padding from borders of draw container
+     * y position in the grid
      */
-    myPadding: null,
+    yPos: null,
 
     /**
      * type of terrain for this space
@@ -27,39 +27,58 @@ Ext.define('TitanWeb.view.Space', {
      */
     orientation: 'top',
 
+    /**
+     * settings for movement arrows
+     */
+    left: null,
+    right: null,
+    up: null,
+    down: null,
+
+    /**
+     * scale for space spacing
+     */
+    myScale: null,
+
     constructor: function(config) {
         var me = this,
             scale = config.myScale,
+            halfScale = scale / 2,
+            xTrans = scale * Math.sin(me.degToRad(30)),
+            yTrans = scale * Math.sin(me.degToRad(60)),
             x = config.xPos * scale + scale,
             isBot = config.orientation === 'bot',
             startingY = (isBot ? scale/2 : 0) + 20,
-            y = startingY + ((isBot ? (config.yPos-1) : config.yPos) * scale * .7),
+            y = startingY + ((isBot ? (config.yPos-1) : config.yPos) * scale * .9),
             bs = function(xAdjust, yAdjust) {
                 x += xAdjust;
                 y += yAdjust;
                 config.path += 'L' + x + ' ' + y + ' ';
             };
 
+        me.initX = x;
+        me.initY = y;
+
+        config.path = 'M'+x+' '+y+' ';
+
         if(isBot) {
-            config.path = 'M'+x+' '+y+' ';
-            bs(scale/2, 0);
-            bs(scale/2, scale/2);
-            bs(-scale/4, scale/4);
+            bs(halfScale/2, 0);
+            bs(xTrans, yTrans);
+            bs(-xTrans/2, yTrans/2);
             bs(-scale, 0);
-            bs(-scale/4, -scale/4);
-            bs(scale/2, -scale/2);
+            bs(-xTrans/2, -yTrans/2);
+            bs(xTrans, -yTrans);
+            bs(halfScale/2, 0);
         }
         else {
-            x = x-scale/4;
-            config.path = 'M'+x+' '+y+' ';
-            bs(scale, 0);
-            bs(scale/4, scale/4);
-            bs(-scale/2, scale/2);
+            bs(scale/2, 0);
+            bs(xTrans/2, yTrans/2);
+            bs(-xTrans, yTrans);
             bs(-scale/2, 0);
-            bs(-scale/2, -scale/2);
-            bs(scale/4, -scale/4);
+            bs(-xTrans, -yTrans);
+            bs(xTrans/2, -yTrans/2);
+            bs(scale/2, 0);
         }
-
 
         config.fillStyle = TitanWeb.view.Space.TERRAIN_COLOR_MAP[config.terrain];
         config.strokeStyle = 'black';
@@ -68,8 +87,72 @@ Ext.define('TitanWeb.view.Space', {
         me.callParent(arguments);
     },
 
-    buildSegment: function() {
+    degToRad: function(deg) {
+        return deg / 180 * Math.PI;
+    },
 
+    /**
+     * Build the sprites for the directional arrows
+     */
+    buildArrows: function() {
+        var me = this,
+            arrows = [],
+            scale = me.myScale,
+            isTop = me.orientation === 'top';
+
+        if(me.left) {
+            if(isTop) {
+                arrows.push(me.buildArrow(me.initX - scale * .1,me.initY + scale * .5, me.left, true, true));
+            }
+            else {
+                arrows.push(me.buildArrow(me.initX - scale / 3,me.initY + scale * 1/4, me.left, true, false));
+            }
+        }
+
+        if(me.right) {
+            if(isTop) {
+                arrows.push(me.buildArrow(me.initX + scale * 1.1, me.initY + scale *.5, me.right, false, true));
+            }
+            else {
+                arrows.push(me.buildArrow(me.initX + scale *.9, me.initY + scale *.25, me.right, false, false));
+            }
+        }
+
+        if(me.up) {
+            arrows.push(me.buildArrow(me.initX + scale *.4, me.initY - scale *.1, me.up, null, true));
+        }
+
+        if(me.down) {
+            arrows.push(me.buildArrow(me.initX + scale *.4, me.initY + scale *.8, me.down, null, false));
+        }
+
+        return arrows;
+    },
+
+    buildArrow: function(x, y, type, isLeft, isTop) {
+        //var me = this,
+        //    scale = me.myScale;
+        //
+        //switch(type) {
+        //    case 'one':
+        //        return {
+        //            type: 'path'
+        //
+        //        };
+        //    case 'three':
+        //        break;
+        //    case 'circle':
+        //        return {
+        //            type: 'circle',
+        //            r: scale / 6,
+        //            x: x,
+        //            y: y,
+        //            fillStyle: 'black',
+        //            zIndex: 1
+        //        };
+        //    case 'square':
+        //        break;
+        //}
     },
 
     statics: {
