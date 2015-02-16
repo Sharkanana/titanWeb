@@ -26,7 +26,7 @@ Ext.define('TitanWeb.view.main.MainController', {
         var me = this,
             gameBoard = me.lookupReference('gameBoard'),
             surface = gameBoard.getSurface(),
-            scale = gameBoard.getHeight() / 16;
+            scale = gameBoard.getHeight() / 15;
 
         Ext.each(board.spaces, function(space) {
             var newSpace = Ext.create('TitanWeb.view.Space', Ext.apply(space, {

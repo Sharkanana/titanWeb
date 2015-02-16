@@ -48,8 +48,8 @@ Ext.define('TitanWeb.view.Space', {
             yTrans = scale * Math.sin(me.degToRad(60)),
             x = config.xPos * scale + scale,
             isBot = config.orientation === 'bot',
-            startingY = (isBot ? scale/2 : 0) + 20,
-            y = startingY + ((isBot ? (config.yPos-1) : config.yPos) * scale * .9),
+            startingY = (isBot ? yTrans/2 : 0) + 10,
+            y = startingY + ((isBot ? (config.yPos-1) : config.yPos) * scale * .85),
             bs = function(xAdjust, yAdjust) {
                 x += xAdjust;
                 y += yAdjust;
